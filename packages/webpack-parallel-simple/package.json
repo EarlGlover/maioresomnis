@@ -1,0 +1,35 @@
+{
+  "name": "dk-webpack-parallel-simple",
+  "author": "Dmitry Kazakov",
+  "license": "MIT",
+  "version": "3.1.8",
+  "description": "Simple tool to parallelize build",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkazakov8/dk-framework.git"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist&&tsc --project tsconfig-compile.json",
+    "prepublishOnly": "pnpm run build",
+    "test": "pnpm run build&&nyc mocha",
+    "posttest": "nyc report --reporter=json"
+  },
+  "dependencies": {
+    "chalk": "4.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.17",
+    "@types/fs-extra": "11.0.1",
+    "fs-extra": "11.1.1",
+    "webpack": "5.88.0"
+  },
+  "peerDependencies": {
+    "@swc-node/register": "*",
+    "webpack": "*"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "main": "dist/index.js",
+  "gitHead": "be06fb1dc46a1dceb1e54e8998ab3c826b5f6b74"
+}

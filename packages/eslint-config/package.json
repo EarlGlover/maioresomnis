@@ -1,0 +1,35 @@
+{
+  "name": "dk-eslint-config",
+  "author": "Dmitry Kazakov",
+  "license": "MIT",
+  "version": "3.1.8",
+  "description": "Enterprise-quality ESLint config with TypeScript support",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkazakov8/dk-framework.git"
+  },
+  "scripts": {
+    "build": "rm -rf ./types&&tsc --project tsconfig.json"
+  },
+  "dependencies": {
+    "@types/eslint": "8.40.2",
+    "@types/eslint-plugin-prettier": "3.1.0",
+    "@typescript-eslint/eslint-plugin": "5.60.0",
+    "@typescript-eslint/parser": "5.60.0",
+    "eslint": "8.43.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-import-resolver-typescript": "3.5.5",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.32.2",
+    "postcss": "8.4.24",
+    "postcss-scss": "4.0.6",
+    "prettier": "2.8.8",
+    "prettier-eslint": "15.0.1",
+    "stylelint": "15.9.0",
+    "stylelint-prettier": "3.0.0"
+  },
+  "main": "src/index.js",
+  "types": "types/index.d.ts",
+  "gitHead": "be06fb1dc46a1dceb1e54e8998ab3c826b5f6b74"
+}

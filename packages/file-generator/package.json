@@ -1,0 +1,38 @@
+{
+  "name": "dk-file-generator",
+  "author": "Dmitry Kazakov",
+  "license": "MIT",
+  "version": "3.1.8",
+  "description": "Creates helper files",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkazakov8/dk-framework.git"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist&&tsc --project tsconfig-compile.json",
+    "test": "nyc mocha",
+    "prepublishOnly": "pnpm run build",
+    "posttest": "nyc report --reporter=json"
+  },
+  "nyc": {
+    "include": "src"
+  },
+  "dependencies": {
+    "chalk": "4.1.2",
+    "chokidar": "3.5.3",
+    "fs-extra": "11.1.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "11.0.1",
+    "ts-interface-checker": "1.0.2"
+  },
+  "peerDependencies": {
+    "typescript": "*"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "gitHead": "be06fb1dc46a1dceb1e54e8998ab3c826b5f6b74"
+}
